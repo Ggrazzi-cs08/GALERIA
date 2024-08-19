@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fotos especiais</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #e1d9ef;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .column {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+    }
+    .column img,
+    .column iframe {
+        width: 90%;
+        height: 200px; /* Altura fixa para as imagens */
+        object-fit: cover; /* Para manter proporções */
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .column img:hover,
+    .column iframe:hover {
+        transform: scale(1.05);
+    }
+    /*responsividade*/
+    @media screen and (max-width: 1020px) {
+        .column {
+            width: calc(45% - 15px);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .column {
+            width: calc(45% - 15px);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .column {
+            width: 100%;
+        }
+    }   
+    /*personalização das imgs*/
+    img {
+    width: 100%; /* Largura de 100% */
+    height: auto; /* Altura automática para manter a proporção */
+    border-radius: 20px; /* Borda arredondada */
+    margin-bottom: 10px; /* Margem inferior de 10px */
+
+
+    width: 100%;
+    height: auto;
+    border: 2px solid #5d2417;
+    padding: 5px; /* Preenchimento interno de 5px */
+
+
+    width: 100%;
+    height: auto;
+ 
+}
+iframe {
+    border: 2px solid #5d2417 ; 
+    padding: 5px; /* Preenchimento interno de 5px */
+    border-radius: 20px; /* Borda arredondada */
+    margin-bottom: 10px; /* Margem inferior de 10px */
+
+}
+
+</style>
+</head>
+<body>
+    <h2 style="color: #5d2417; font-family:Georgia, 'Times New Roman', Times, serif"><center>GALERIA ESPECIAL</center></h2>
+<div class="container">
+
+    <div class="column">
+        <img src="img/licinha.jpeg" alt="Imagem 1" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <img src="img/ivo.jpeg" alt="Imagem 2" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <img src="img/eles2.jpeg" alt="Imagem 3" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <img src="img/eles.jpeg" alt="Imagem 4" onclick="openMedia(this.src)">
+    </div>
+
+    <div class="column">
+        <img src="img/sthe.jpeg" alt="Imagem 5" onclick="openMedia(this.src)">
+    </div>
+    
+    <div class="column">
+        <img src="img/grazzi.jpeg" alt="Imagem 6" onclick="openMedia(this.src)">
+    </div>
+
+</div>
+
+<script>
+    function openMedia(source) {
+        window.open(source);
+    }
+</script>
+</body>
+</html>
